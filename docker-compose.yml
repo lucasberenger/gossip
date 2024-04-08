@@ -1,12 +1,12 @@
 version: '3.8'
 
 services:
-  web:
+  backend:
     build:
-      context: .
+      context: ./backend
       dockerfile: Dockerfile
     volumes:
-      - ./:/app
+      - ./backend:/app
     ports: 
       - "8000:8000"
     command: > 
